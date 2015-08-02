@@ -71,17 +71,11 @@ Released   : 20130902
 				
 			</ul>
 		</div>
-		<script language="JavaScript">
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name");
-frmvalidator.addValidation("email","req","Please provide your email");
-frmvalidator.addValidation("email","email",
-  "Please enter a valid email address");
 </script>
 		<div id="sidebar">
 			<h2>Contact Me</h2>
 			<p>Whether you have questions about my work or want to inquire about any project ideas you have, please use the form below to send me a message.</p>
-			<section>
+			<!--<section>
 										<form method="post" action="/contactform.php">
 											<div>
 												<div>
@@ -105,17 +99,17 @@ frmvalidator.addValidation("email","email",
 												</div>
 											</div>
 										</form>
-									</section>
+									</section>-->
 <section>
 <form id='contactus' action='<?php echo $formproc->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
 <fieldset >
-<legend>Contact us</legend>
+
 
 <input type='hidden' name='submitted' id='submitted' value='1'/>
 <input type='hidden' name='<?php echo $formproc->GetFormIDInputName(); ?>' value='<?php echo $formproc->GetFormIDInputValue(); ?>'/>
 <input type='text'  class='spmhidip' name='<?php echo $formproc->GetSpamTrapInputName(); ?>' />
 
-<div class='short_explanation'>* required fields</div>
+
 
 <div><span class='error'><?php echo $formproc->GetErrorMessage(); ?></span></div>
 <div class='container'>
@@ -136,9 +130,14 @@ frmvalidator.addValidation("email","email",
 </div>
 
 
-<div class='container'>
-    <input type='submit' name='Submit' value='Submit' />
-</div>
+<div>
+												<div>
+													<ul>
+														<li><input type="submit" class="button" id="form-button1" value="Submit" /></li>
+														<li><input type="reset" class="button" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
 
 </fieldset>
 </form>
