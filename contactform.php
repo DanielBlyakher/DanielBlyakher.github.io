@@ -13,7 +13,7 @@ $formproc = new FGContactForm();
 
 //1. Add your email address here.
 //You can add more than one receipients.
-$formproc->AddRecipient('tests@html-form-guide.com'); //<<---Put your email address here
+$formproc->AddRecipient('blyakhed@bxscience.edu'); //<<---Put your email address here
 
 
 //2. For better security. Get a random tring from this link: http://tinyurl.com/randstr
@@ -36,7 +36,7 @@ if(isset($_POST['submitted']))
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
       <title>Contact us</title>
       <link rel="STYLESHEET" type="text/css" href="contact.css" />
-      <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+      <script type='text/javascript' src='/scripts/gen_validatorv31.js'></script>
 </head>
 <body>
 
