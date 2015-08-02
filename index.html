@@ -75,7 +75,7 @@ Released   : 20130902
 		<div id="sidebar">
 			<h2>Contact Me</h2>
 			<p>Whether you have questions about my work or want to inquire about any project ideas you have, please use the form below to send me a message.</p>
-			<!--<section>
+			<section>
 										<form method="post" action="/contactform.php">
 											<div>
 												<div>
@@ -99,63 +99,8 @@ Released   : 20130902
 												</div>
 											</div>
 										</form>
-									</section>-->
-<section>
-<form id='contactus' action='<?php echo $formproc->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
-<fieldset >
+									</section>
 
-
-<input type='hidden' name='submitted' id='submitted' value='1'/>
-<input type='hidden' name='<?php echo $formproc->GetFormIDInputName(); ?>' value='<?php echo $formproc->GetFormIDInputValue(); ?>'/>
-<input type='text'  class='spmhidip' name='<?php echo $formproc->GetSpamTrapInputName(); ?>' />
-
-
-
-<div><span class='error'><?php echo $formproc->GetErrorMessage(); ?></span></div>
-<div class='container'>
-    <label for='name' >Your Full Name*: </label><br/>
-    <input type='text' name='name' id='name' value='<?php echo $formproc->SafeDisplay('name') ?>' maxlength="50" /><br/>
-    <span id='contactus_name_errorloc' class='error'></span>
-</div>
-<div class='container'>
-    <label for='email' >Email Address*:</label><br/>
-    <input type='text' name='email' id='email' value='<?php echo $formproc->SafeDisplay('email') ?>' maxlength="50" /><br/>
-    <span id='contactus_email_errorloc' class='error'></span>
-</div>
-
-<div class='container'>
-    <label for='message' >Message:</label><br/>
-    <span id='contactus_message_errorloc' class='error'></span>
-    <textarea rows="10" cols="50" name='message' id='message'><?php echo $formproc->SafeDisplay('message') ?></textarea>
-</div>
-
-
-<div>
-												<div>
-													<ul>
-														<li><input type="submit" class="button" id="form-button1" value="Submit" /></li>
-														<li><input type="reset" class="button" value="Reset" /></li>
-													</ul>
-												</div>
-											</div>
-
-</fieldset>
-</form>
-</section>
-<!-- client-side Form Validations:
-Uses the excellent form validation script from JavaScript-coder.com-->
-
-<script type='text/javascript'>
-// <![CDATA[
-    var frmvalidator  = new Validator("contactus");
-    frmvalidator.EnableOnPageErrorDisplay();
-    frmvalidator.EnableMsgsTogether();
-    frmvalidator.addValidation("name","req","Please provide your name");
-    frmvalidator.addValidation("email","req","Please provide your email address");
-    frmvalidator.addValidation("email","email","Please provide a valid email address");
-    frmvalidator.addValidation("message","maxlen=2048","The message is too long!(more than 2KB!)");
-// ]]>
-</script>
 
 			
 	</div>
