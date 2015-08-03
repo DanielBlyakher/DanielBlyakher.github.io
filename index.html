@@ -19,6 +19,7 @@ Released   : 20130902
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="/default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -78,15 +79,18 @@ Released   : 20130902
 										<form method="post" action="/contactform.php">
 											<div>
 												<div>
-													<input type="text" name="name" id="contact-name" placeholder="Name" />
+													<input type="text" name="name" id="contact-name" placeholder="Name" value="<?php echo htmlspecialchars($_POST['name']); ?>"/>
+													<?php echo "<p class='text-danger'>$errName</p>";?>
 												</div>
 												<div>
-													<input type="text" name="email" id="contact-email" placeholder="Email" />
+													<input type="text" name="email" id="contact-email" placeholder="Email" value="<?php echo htmlspecialchars($_POST['email']); ?>"/>
+													<?php echo "<p class='text-danger'>$errEmail</p>";?>
 												</div>
 											</div>
 											<div>
 												<div>
-													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4" <?php echo htmlspecialchars($_POST['message']);?>></textarea>
+													<?php echo "<p class='text-danger'>$errMessage</p>";?>
 												</div>
 											</div>
 											<div>
@@ -99,6 +103,8 @@ Released   : 20130902
 											</div>
 										</form>
 									</section>
+									<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+									<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 
 			
